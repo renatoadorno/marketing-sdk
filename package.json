@@ -1,5 +1,5 @@
 {
-  "name": "marketing-sdk",
+  "name": "@renatoadorno/marketing-sdk",
   "version": "0.1.0",
   "description": "SDK unificado de tracking server-side (CAPI) para e-commerce. Facebook, Google GA4 e Spotify Ads.",
   "type": "module",
@@ -35,5 +35,12 @@
   "peerDependencies": {
     "typescript": "^5"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renatoadorno/marketing-sdk.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }

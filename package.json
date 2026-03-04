@@ -1,0 +1,39 @@
+{
+  "name": "marketing-sdk",
+  "version": "0.1.0",
+  "description": "SDK unificado de tracking server-side (CAPI) para e-commerce. Facebook, Google GA4 e Spotify Ads.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bunup",
+    "dev": "bunup --watch",
+    "test": "bun test",
+    "type-check": "bunx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bunup": "^0.16.31"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "license": "MIT"
+}

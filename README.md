@@ -1,11 +1,31 @@
-# marketing-sdk
+# @renatoadorno/marketing-sdk
 
 SDK TypeScript para unificar tracking server-side (CAPI) de conversoes em e-commerce. Envia dados para **Facebook**, **Google Analytics 4** e **Spotify Ads** a partir de um unico objeto padronizado.
 
 ## Instalacao
 
+O pacote esta hospedado no GitHub Packages. Configure o registry antes de instalar:
+
+**1. Adicione ao `.npmrc` do seu projeto:**
+
+```
+@renatoadorno:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=SEU_GITHUB_TOKEN
+```
+
+> O `SEU_GITHUB_TOKEN` e um [Personal Access Token](https://github.com/settings/tokens) com permissao `read:packages`.
+
+**2. Instale o pacote:**
+
 ```bash
-bun install
+# Bun
+bun add @renatoadorno/marketing-sdk
+
+# npm
+npm install @renatoadorno/marketing-sdk
+
+# pnpm
+pnpm add @renatoadorno/marketing-sdk
 ```
 
 ## Quick Start
@@ -19,7 +39,7 @@ import {
   UserData,
   CustomData,
   ItemData,
-} from 'marketing-sdk'
+} from '@renatoadorno/marketing-sdk'
 
 // 1. Configurar o tracker uma unica vez (boot do servidor)
 const tracker = new Tracker()
@@ -213,4 +233,3 @@ bun test
 ## Documentacao
 
 - `docs/use-cases.md` — Casos de uso detalhados com migracao do Facebook SDK
-- `brainstorming.md` — Pesquisa e decisoes arquiteturais
